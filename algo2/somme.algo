@@ -1,0 +1,19 @@
+ALGORITHM SOMME
+VAR
+    som,i,j : INTEGER:=0;
+    T1: ARRAY_OF INTEGER[50];
+    T2: ARRAY_OF INTEGER[50];
+BEGIN
+    WRITE("Entrez le premier tableau");
+    READ(T1); 
+    WRITE("Entrez le deuxième tableau");
+    READ(T2);
+    FOR i FROM 0 TO T1.length-1 STEP 1  DO {
+        FOR j FROM 0 TO T2.length-1 STEP 1  DO {
+            IF (T1[i]!=T2[j]) THEN
+                som+=T1[i]+T2[j] ;
+            END_IF
+        }
+    }
+   WRITE("som="+som);
+END
